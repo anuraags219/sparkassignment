@@ -1,17 +1,17 @@
-Simple Spark Maven Project
-==============
+Aadhar & visit data Spark Maven Project
+=======================================
 
 A demonstration of a simple Spark project that uses Maven for building.  The app simply counts the
 number of lines in a text file.
 
 To build a JAR:
 
-    mvn package
+    mvn clean package assembly:single
 
 To run on a cluster with Spark installed:
 
-    spark-submit --master local \
-      target/simplesparkproject-0.1.0-jar-with-dependencies.jar <input file>
+    spark-submit --class <fully classified class name> --master <yarn/local> \
+      <path-to-jar-with-dependencies.jar> <input file>
 
 To run a REPL that can reference the objects and classes defined in this project:
 
